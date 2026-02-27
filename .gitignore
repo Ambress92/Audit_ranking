@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_metadata/
+
+# Data files (too large for git)
+data/
+
+# Old experiments archive
+OLD/
+
+# Cached results
+*.pkl
+results/*.pkl
+
+# Virtual environments
+.venv/
+venv/
+det-int/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
