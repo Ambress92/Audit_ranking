@@ -71,7 +71,7 @@ def preprocessing_data(df, y_name='income', dataset_name='adults'):
     return df
     
 
-def load_dataset(dataset_name, data_dir="/home/carloabrate/iii/data"):
+def load_dataset(dataset_name, data_dir=None):
     """Load and preprocess a dataset, returning (df, y_name, features_Z).
 
     Supported datasets: 'adults', 'propublica', 'law', 'edu'.
@@ -105,11 +105,13 @@ def load_dataset(dataset_name, data_dir="/home/carloabrate/iii/data"):
         },
     }
 
+    if data_dir is None:
+        data_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data")
+
     if dataset_name not in CONFIGS:
         raise ValueError(
             f"Unknown dataset '{dataset_name}'. "
-            f"Available: {list(CONFIGS.keys())}"
-        )
+            f"Available: {list(CONFIGS.keys())}")
 
     cfg = CONFIGS[dataset_name]
     path = os.path.join(data_dir, cfg["file"])

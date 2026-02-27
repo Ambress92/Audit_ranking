@@ -68,7 +68,9 @@ iii/
 
 ```bash
 # activate the virtual environment
-source /home/carloabrate/det-int/bin/activate
+# activate your virtual environment, e.g.:
+# source /path/to/your/venv/bin/activate
+pip install -r requirements.txt   # if a requirements file is provided
 
 # run a real-data experiment
 # → open experiment_real_data.ipynb, set dataset_name, Run All
