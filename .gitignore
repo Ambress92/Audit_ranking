@@ -17,9 +17,11 @@ data/
 # Old experiments archive
 OLD/
 
-# Cached results
+# Cached results & outputs
 *.pkl
-results/*.pkl
+*.csv
+*.pdf
+results/
 
 # Virtual environments
 .venv/
